@@ -8,7 +8,7 @@ public class Exercise08 {
         System.out.print("Enter score: ");
         double score = scanner.nextDouble();
         if (score < 0 || score > 10) {
-            System.out.println("Invalid score.");
+            System.out.println("Invalid score .");
             System.out.println("Score must be between 0 and 10.");
             scanner.close();
             return;
