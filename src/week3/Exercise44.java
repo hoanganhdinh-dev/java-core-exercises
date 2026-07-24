@@ -38,10 +38,10 @@ public class Exercise44 {
             }
         }
         double averageSalary = (double) totalSalary / numberOfEmployees;
-        System.out.printf("Total salary: %d%n", totalSalary);
-        System.out.printf("Average salary: %.2f%n", averageSalary);
-        System.out.printf("Highest salary: %d%n", highestSalary);
-        System.out.printf("Lowest salary: %d%n", lowestSalary);
+        System.out.printf("Total salary: %d VND%n", totalSalary);
+        System.out.printf("Average salary: %.2f VND%n", averageSalary);
+        System.out.printf("Highest salary: %d VND%n", highestSalary);
+        System.out.printf("Lowest salary: %d VND%n", lowestSalary);
         System.out.println("Employees with salary >= " + SALARY_THRESHOLD + ": " + countSalaryAboveThreshold);
         scanner.close();
     }
