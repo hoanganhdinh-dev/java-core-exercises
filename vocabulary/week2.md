@@ -1,84 +1,78 @@
-# Summary Week 2
-
-## Loop
-
-| English | Vietnamese | Example | Note |
-|---------|------------|---------|------|
-| Loop | Vòng lặp | `for (...) {}` | Lặp lại một khối lệnh |
-| While Loop | Vòng lặp while | `while (number > 0)` | Kiểm tra điều kiện trước |
-| Do-While Loop | Vòng lặp do-while | `do { ... } while (choice != 0);` | Luôn chạy ít nhất một lần |
-| For Loop | Vòng lặp for | `for (int i = 1; i <= 10; i++)` | Dùng khi biết số lần lặp |
-| Nested Loop | Vòng lặp lồng nhau | `for (...) { for (...) {} }` | Thường dùng in hình |
-| Infinite Loop | Vòng lặp vô hạn | `while (true)` | Chỉ dừng khi `break` |
-| Iteration | Lần lặp | `Each iteration prints one line.` | Một chu kỳ của vòng lặp |
-| Counter | Biến đếm | `int count = 0;` | Theo dõi số lần lặp |
-| Increment | Tăng 1 | `i++;` | Toán tử `++` |
-| Decrement | Giảm 1 | `i--;` | Toán tử `--` |
-| Break | Thoát vòng lặp | `break;` | Dừng vòng lặp hiện tại |
-| Continue | Bỏ qua lần lặp | `continue;` | Sang lần lặp kế tiếp |
+# Week 2 - English Vocabulary
 
 ---
 
-## Number Processing
+# Java Core
 
-| English | Vietnamese | Example | Note |
-|---------|------------|---------|------|
-| Even Number | Số chẵn | `number % 2 == 0` | Chia hết cho 2 |
-| Odd Number | Số lẻ | `number % 2 != 0` | Không chia hết cho 2 |
-| Prime Number | Số nguyên tố | `isPrime(number)` | Chỉ có 2 ước |
-| Divisor | Ước số | `number % i == 0` | Số chia hết |
-| Multiple | Bội số | `number % 5 == 0` | Chia hết cho một số |
-| Factorial | Giai thừa | `factorial *= i;` | `n!` |
-| Square | Bình phương | `number * number` | Lũy thừa bậc hai |
-| Square Root | Căn bậc hai | `Math.sqrt(number)` | Dùng `Math.sqrt()` |
-| Power | Lũy thừa | `Math.pow(a, b)` | Dùng `Math.pow()` |
-| Divisible | Chia hết | `number % 3 == 0` | Kiểm tra chia hết |
-| Non-divisible | Không chia hết | `number % 3 != 0` | Điều kiện ngược lại |
-
----
-
-## Pattern
-
-| English | Vietnamese | Example | Note |
-|---------|------------|---------|------|
-| Pattern | Mẫu | `Print star pattern` | In hình bằng vòng lặp |
-| Row | Hàng | `for (row = 1; ...)` | Dòng ngang |
-| Column | Cột | `for (col = 1; ...)` | Dòng dọc |
-| Star | Dấu sao | `"*"` | Ký tự thường dùng |
-| Space | Khoảng trắng | `" "` | Căn chỉnh hình |
-| Character | Ký tự | `'A'` | Một ký tự |
+| English   | Vietnamese      | Example           | Note                     |
+|-----------|-----------------|-------------------|--------------------------|
+| Switch    | Câu lệnh switch | `switch(choice)`  | Rẽ nhánh nhiều lựa chọn  |
+| Case      | Trường hợp      | `case 1:`         | Một nhánh trong switch   |
+| Default   | Mặc định        | `default:`        | Chạy khi không khớp case |
+| Break     | Thoát           | `break;`          | Kết thúc case            |
+| Menu      | Menu            | Main menu         | Danh sách lựa chọn       |
+| Choice    | Lựa chọn        | Enter your choice | Giá trị người dùng chọn  |
+| Option    | Tùy chọn        | Menu option       | Một mục trong menu       |
+| Character | Ký tự           | `char operator`   | Kiểu dữ liệu ký tự       |
+| Operator  | Toán tử         | `+ - * /`         | Thực hiện phép toán      |
+| Scanner   | Bộ đọc dữ liệu  | `Scanner scanner` | Nhập dữ liệu             |
 
 ---
 
-## Loop Control
+# Programming
 
-| English | Vietnamese | Example | Note |
-|---------|------------|---------|------|
-| Start Value | Giá trị bắt đầu | `int i = 1` | Điểm bắt đầu vòng lặp |
-| End Value | Giá trị kết thúc | `i <= 100` | Điều kiện dừng |
-| Step | Bước nhảy | `i += 2` | Khoảng tăng mỗi lần |
-| Ascending | Tăng dần | `i++` | Từ nhỏ đến lớn |
-| Descending | Giảm dần | `i--` | Từ lớn đến nhỏ |
-
----
-
-## Algorithm
-
-| English | Vietnamese | Example | Note |
-|---------|------------|---------|------|
-| Algorithm | Thuật toán | `Prime number algorithm` | Các bước giải quyết bài toán |
-| Count | Đếm | `count++;` | Đếm số lượng |
-| Accumulate | Cộng dồn | `sum += i;` | Cộng liên tiếp |
-| Traverse | Duyệt | `for (int i = 0; ...)` | Duyệt từng phần tử hoặc giá trị |
-| Repeat | Lặp lại | `Repeat until condition is false.` | Thực hiện nhiều lần |
+| English    | Vietnamese   | Example              | Note                  |
+|------------|--------------|----------------------|-----------------------|
+| Select     | Chọn         | Select an option     | Chọn chức năng        |
+| Compare    | So sánh      | Compare values       | So sánh dữ liệu       |
+| Execute    | Thực thi     | Execute the program  | Chạy chương trình     |
+| Invalid    | Không hợp lệ | Invalid choice       | Giá trị sai           |
+| Exit       | Thoát        | Exit program         | Kết thúc chương trình |
+| Display    | Hiển thị     | Display menu         | In thông tin          |
+| Arithmetic | Số học       | Arithmetic operation | Phép toán             |
+| Calculate  | Tính toán    | Calculate result     | Thực hiện phép tính   |
+| Convert    | Chuyển đổi   | Convert units        | Đổi đơn vị            |
+| Evaluate   | Đánh giá     | Evaluate expression  | Đánh giá biểu thức    |
 
 ---
 
-## Output Formatting
+# Problem Domain
 
-| English | Vietnamese | Example | Note |
-|---------|------------|---------|------|
-| Format | Định dạng | `System.out.printf()` | Xuất dữ liệu đẹp hơn |
-| Alignment | Căn lề | `%-10s` | Căn trái hoặc phải |
-| Width | Độ rộng | `%10d` | Độ rộng cột |
-| Precision | Độ chính xác | `%.2f` | Số chữ số sau dấu phẩy |
+| English    | Vietnamese     | Example           | Note              |
+|------------|----------------|-------------------|-------------------|
+| Weekday    | Thứ trong tuần | Monday            | Exercise21        |
+| Calculator | Máy tính       | Simple calculator | Exercise23        |
+| Currency   | Tiền tệ        | USD to VND        | Chuyển đổi tiền   |
+| Unit       | Đơn vị         | Unit converter    | Chuyển đổi đơn vị |
+| Kilometer  | Kilômét        | 10 km             | Độ dài            |
+| Meter      | Mét            | 1000 m            | Độ dài            |
+| Celsius    | Độ C           | 30°C              | Nhiệt độ          |
+| Fahrenheit | Độ F           | 86°F              | Nhiệt độ          |
+| ATM        | Máy ATM        | ATM menu          | Ngân hàng         |
+| Withdraw   | Rút tiền       | Withdraw money    | ATM               |
+| Deposit    | Gửi tiền       | Deposit money     | ATM               |
+| Balance    | Số dư          | Current balance   | Tài khoản         |
+| Transfer   | Chuyển tiền    | Transfer money    | Ngân hàng         |
+| Account    | Tài khoản      | Bank account      | Ngân hàng         |
+| Bank       | Ngân hàng      | Mini Bank         | Exercise30        |
+
+---
+
+# Common Verbs
+
+| English   | Vietnamese      | Example             | Note             |
+|-----------|-----------------|---------------------|------------------|
+| Choose    | Chọn            | Choose an option    | Người dùng chọn  |
+| Enter     | Nhập            | Enter amount        | Nhập dữ liệu     |
+| Check     | Kiểm tra        | Check balance       | Kiểm tra         |
+| Withdraw  | Rút             | Withdraw money      | ATM              |
+| Deposit   | Gửi             | Deposit money       | ATM              |
+| Transfer  | Chuyển          | Transfer money      | Ngân hàng        |
+| Convert   | Chuyển đổi      | Convert currency    | Đổi đơn vị       |
+| Calculate | Tính toán       | Calculate bill      | Tính toán        |
+| Print     | In              | Print result        | Hiển thị         |
+| Return    | Trả về          | Return value        | Giá trị trả về   |
+| Exit      | Thoát           | Exit program        | Kết thúc         |
+| Display   | Hiển thị        | Display information | Xuất màn hình    |
+| Select    | Chọn            | Select menu         | Chọn chức năng   |
+| Validate  | Kiểm tra hợp lệ | Validate input      | Xác thực dữ liệu |
