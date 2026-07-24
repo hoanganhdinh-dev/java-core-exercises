@@ -14,10 +14,10 @@ public class Exercise43 {
         }
         int currentStudent = 1;
         double totalScore = 0;
-        double highestScore = Double.NEGATIVE_INFINITY;
-        double lowestScore = Double.MAX_VALUE;
         final double MAX_SCORE = 10;
-        final double PASSING_SCORE = 8;
+        final double EXCELLENT_SCORE = 8;
+        double highestScore = 0;
+        double lowestScore = MAX_SCORE;
         int countExcellentStudents = 0;
         while (currentStudent <= numberOfStudents) {
             System.out.print("Student " + currentStudent + " score: ");
@@ -32,7 +32,7 @@ public class Exercise43 {
                 if (score < lowestScore) {
                     lowestScore = score;
                 }
-                if (score >= PASSING_SCORE) {
+                if (score >= EXCELLENT_SCORE) {
                     countExcellentStudents++;
                 }
                 currentStudent++;
@@ -40,9 +40,9 @@ public class Exercise43 {
         }
         double averageScore = totalScore / numberOfStudents;
         System.out.printf("Average score: %.2f%n", averageScore);
-        System.out.println("Highest score: " + highestScore);
-        System.out.println("Lowest score: " + lowestScore);
-        System.out.println("Students with score >= " + PASSING_SCORE + ": " + countExcellentStudents);
+        System.out.printf("Highest score: %.2f%n", highestScore);
+        System.out.printf("Lowest score: %.2f%n", lowestScore);
+        System.out.println("Students with score >= " + EXCELLENT_SCORE + ": " + countExcellentStudents);
         scanner.close();
     }
 }
