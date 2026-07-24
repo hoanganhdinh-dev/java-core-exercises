@@ -38,9 +38,10 @@ public class Exercise42 {
             }
         }
         double averageBonus = (double) totalBonus / numberOfEmployees;
-        System.out.println("Highest bonus: " + highestBonus);
-        System.out.println("Lowest bonus: " + lowestBonus);
-        System.out.printf("Average bonus: %.2f%n", averageBonus);
+        System.out.println("Highest bonus: " + highestBonus + " VND");
+        System.out.println("Lowest bonus: " + lowestBonus + " VND");
+        System.out.printf("Average bonus: %.2f VND%n", averageBonus);
         System.out.println("Employees with bonus >= " + BONUS_THRESHOLD + ": " + countBonusAboveThreshold);
+        scanner.close();
     }
 }
