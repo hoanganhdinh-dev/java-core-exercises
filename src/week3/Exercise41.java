@@ -7,7 +7,6 @@ public class Exercise41 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter number of households: ");
         int numberOfHouseholds = scanner.nextInt();
-
         if (numberOfHouseholds <= 0) {
             System.out.println("Invalid number of households.");
             scanner.close();
@@ -52,4 +51,3 @@ public class Exercise41 {
         scanner.close();
     }
 }
-
