@@ -2,12 +2,34 @@ package week4;
 
 import java.util.Scanner;
 
+/*
+ * ========================================
+ * Exercise 47 — ATM Banking System
+ * ========================================
+ *
+ * Description:
+ * Create a simple ATM system that allows users
+ * to check balance, deposit money, and withdraw money.
+ *
+ * Concepts:
+ * - Scanner
+ * - do-while loop
+ * - switch-case
+ * - if-else validation
+ * - Constants
+ */
+
 public class Exercise47 {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
         final int INITIAL_BALANCE = 5_000_000;
+
         int balance = INITIAL_BALANCE;
         int choice;
+
         do {
             System.out.println("========= ATM MENU =========");
             System.out.println("1. Check Balance");
@@ -15,15 +37,20 @@ public class Exercise47 {
             System.out.println("3. Withdraw");
             System.out.println("4. Exit");
             System.out.println("============================");
+
             System.out.print("Choose(1-4): ");
             choice = scanner.nextInt();
+
             switch (choice) {
+
                 case 1:
                     System.out.printf("Current balance: %,d VND%n", balance);
                     break;
+
                 case 2: {
                     System.out.print("Enter deposit amount: ");
                     int amount = scanner.nextInt();
+
                     if (amount <= 0) {
                         System.out.println("Invalid amount.");
                     } else {
@@ -31,31 +58,37 @@ public class Exercise47 {
                         System.out.println("Deposit successful.");
                         System.out.printf("Current balance: %,d VND%n", balance);
                     }
+
                     break;
                 }
+
                 case 3: {
                     System.out.print("Enter withdraw amount: ");
                     int amount = scanner.nextInt();
+
                     if (amount <= 0) {
                         System.out.println("Invalid amount.");
+                    } else if (amount <= balance) {
+                        balance -= amount;
+                        System.out.println("Withdraw successful.");
+                        System.out.printf("Current balance: %,d VND%n", balance);
                     } else {
-                        if (amount <= balance) {
-                            balance -= amount;
-                            System.out.println("Withdraw successful.");
-                            System.out.printf("Current balance: %,d VND%n", balance);
-                        } else {
-                            System.out.println("Insufficient balance.");
-                        }
+                        System.out.println("Insufficient balance.");
                     }
+
                     break;
                 }
+
                 case 4:
                     System.out.println("Thank you for using our ATM.");
                     break;
+
                 default:
                     System.out.println("Invalid choice.");
             }
+
         } while (choice != 4);
+
         scanner.close();
     }
 }
