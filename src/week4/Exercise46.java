@@ -2,24 +2,58 @@ package week4;
 
 import java.util.Scanner;
 
+/*
+ * ========================================
+ * Exercise 46 — Number Guessing Game
+ * ========================================
+ *
+ * Description:
+ * Create a guessing game where the user tries
+ * to guess a secret number.
+ *
+ * Rules:
+ * - User enters guesses until correct.
+ * - Count the number of attempts.
+ *
+ * Concepts:
+ * - Scanner
+ * - do-while loop
+ * - if-else statement
+ * - Constants
+ */
+
 public class Exercise46 {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
         final int SECRET_NUMBER = 27;
+
         int attempts = 0;
         int guess;
+
         do {
             System.out.print("Enter your guess: ");
             guess = scanner.nextInt();
+
             attempts++;
+
             if (guess < SECRET_NUMBER) {
                 System.out.println("Too low! Try again.");
+
             } else if (guess > SECRET_NUMBER) {
                 System.out.println("Too high! Try again.");
+
             } else {
-                System.out.printf("Congratulations! You guessed the number in %d attempts.%n", attempts);
+                System.out.printf(
+                        "Congratulations! You guessed the number in %d attempts.%n",
+                        attempts
+                );
             }
+
         } while (guess != SECRET_NUMBER);
+
         scanner.close();
     }
 }
