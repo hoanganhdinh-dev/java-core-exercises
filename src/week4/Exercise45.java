@@ -2,12 +2,38 @@ package week4;
 
 import java.util.Scanner;
 
+/*
+ * ========================================
+ * Exercise 45 — Number Management System
+ * ========================================
+ *
+ * Description:
+ * Create a menu-driven program that allows
+ * users to manage and analyze an integer.
+ *
+ * Features:
+ * - Check even or odd number.
+ * - Check prime number.
+ * - Calculate sum from 1 to n.
+ *
+ * Concepts:
+ * - Scanner
+ * - do-while loop
+ * - switch-case
+ * - while loop
+ * - boolean state management
+ */
+
 public class Exercise45 {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
         int number = 0;
         boolean hasInput = false;
         int choice;
+
         do {
             System.out.println("===== NUMBER MANAGEMENT =====");
             System.out.println("1. Enter an integer");
@@ -16,74 +42,103 @@ public class Exercise45 {
             System.out.println("4. Calculate the sum from 1 to n");
             System.out.println("5. Exit");
             System.out.println("=============================");
+
             System.out.print("Choose an option: ");
             choice = scanner.nextInt();
+
             switch (choice) {
+
                 case 1:
                     System.out.print("Enter an integer: ");
                     number = scanner.nextInt();
                     hasInput = true;
                     break;
+
                 case 2:
                     if (hasInput) {
+
                         if (number % 2 == 0) {
                             System.out.printf("%d is an even number.%n", number);
                         } else {
                             System.out.printf("%d is an odd number.%n", number);
                         }
+
                     } else {
                         System.out.println("Please enter a number first.");
                     }
                     break;
+
                 case 3:
                     if (hasInput) {
+
                         if (number <= 1) {
                             System.out.println(number + " is not a prime number.");
+
                         } else {
+
                             int i = 2;
                             boolean isPrime = true;
+
                             while (i < number) {
+
                                 if (number % i == 0) {
                                     isPrime = false;
                                     break;
                                 }
+
                                 i++;
                             }
+
                             if (isPrime) {
                                 System.out.println(number + " is a prime number.");
                             } else {
                                 System.out.println(number + " is not a prime number.");
                             }
                         }
+
                     } else {
                         System.out.println("Please enter a number first.");
                     }
                     break;
+
                 case 4:
                     if (hasInput) {
+
                         if (number <= 0) {
                             System.out.println("Invalid input.");
+
                         } else {
+
                             int j = 1;
                             int totalSum = 0;
+
                             while (j <= number) {
                                 totalSum += j;
                                 j++;
                             }
-                            System.out.printf("The sum from 1 to %d is %d.%n", number, totalSum);
+
+                            System.out.printf(
+                                    "The sum from 1 to %d is %d.%n",
+                                    number,
+                                    totalSum
+                            );
                         }
+
                     } else {
                         System.out.println("Please enter a number first.");
                     }
                     break;
+
                 case 5:
                     System.out.println("Program terminated.");
                     break;
+
                 default:
                     System.out.println("Invalid choice.");
-                    break;
             }
+
         } while (choice != 5);
+
         scanner.close();
     }
 }
