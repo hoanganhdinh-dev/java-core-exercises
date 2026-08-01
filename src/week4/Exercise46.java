@@ -38,9 +38,7 @@ public class Exercise46 {
                 System.out.println("Too high! Try again.");
             } else {
                 System.out.printf(
-                        "Congratulations! You guessed the number in %d attempts.%n",
-                        attempts
-                );
+                        "Congratulations! You guessed the number in %d attempts.%n", attempts);
             }
         } while (guess != SECRET_NUMBER);
         scanner.close();
