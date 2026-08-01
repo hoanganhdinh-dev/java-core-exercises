@@ -25,50 +25,32 @@ import java.util.Scanner;
 
 public class Exercise48 {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-
         final String CORRECT_USERNAME = "admin";
         final String CORRECT_PASSWORD = "123456";
         final int MAX_ATTEMPTS = 3;
-
         int attempts = 0;
         boolean loginSuccess = false;
-
         do {
             System.out.print("Enter username: ");
             String username = scanner.nextLine();
-
             System.out.print("Enter password: ");
             String password = scanner.nextLine();
-
-            if (username.equals(CORRECT_USERNAME)
-                    && password.equals(CORRECT_PASSWORD)) {
-
+            if (username.equals(CORRECT_USERNAME) && password.equals(CORRECT_PASSWORD)) {
                 System.out.println("Login successful.");
                 loginSuccess = true;
-
             } else {
-
                 System.out.println("Invalid username or password.");
                 attempts++;
-
-                System.out.println("Remaining attempts: "
-                        + (MAX_ATTEMPTS - attempts));
+                System.out.println("Remaining attempts: " + (MAX_ATTEMPTS - attempts));
             }
-
         } while (!loginSuccess && attempts < MAX_ATTEMPTS);
-
-
         if (!loginSuccess) {
             System.out.println("Account locked.");
         }
-
         scanner.close();
     }
 }
-
-
 /*
  * ========================================
  * PROGRAM FLOW
