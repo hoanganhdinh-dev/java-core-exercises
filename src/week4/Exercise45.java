@@ -93,11 +93,7 @@ public class Exercise45 {
                                 totalSum += j;
                                 j++;
                             }
-                            System.out.printf(
-                                    "The sum from 1 to %d is %d.%n",
-                                    number,
-                                    totalSum
-                            );
+                            System.out.printf("The sum from 1 to %d is %d.%n", number, totalSum);
                         }
                     } else {
                         System.out.println("Please enter a number first.");
