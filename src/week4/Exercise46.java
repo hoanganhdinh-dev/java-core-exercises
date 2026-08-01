@@ -23,37 +23,26 @@ import java.util.Scanner;
  */
 
 public class Exercise46 {
-
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-
         final int SECRET_NUMBER = 27;
-
         int attempts = 0;
         int guess;
-
         do {
             System.out.print("Enter your guess: ");
             guess = scanner.nextInt();
-
             attempts++;
-
             if (guess < SECRET_NUMBER) {
                 System.out.println("Too low! Try again.");
-
             } else if (guess > SECRET_NUMBER) {
                 System.out.println("Too high! Try again.");
-
             } else {
                 System.out.printf(
                         "Congratulations! You guessed the number in %d attempts.%n",
                         attempts
                 );
             }
-
         } while (guess != SECRET_NUMBER);
-
         scanner.close();
     }
 }
